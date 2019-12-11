@@ -9,7 +9,7 @@ function ouo_io($claveApi, $enlace){
 	// Comprobar si lo que obtuvimo
 	// es un enlace válido utilizando una
 	// expresión regular
-    if (preg_match('/^http:\/\/ouo\.io\/\w+$/', $acortado) !== 1)
+    if (preg_match('/^(http|https):\/\/ouo\.io\/\w+$/', $acortado) !== 1)
         throw new Exception("Enlace inesperado al acortar con ouo.io: " . $acortado);
     return $acortado;
 }
